@@ -1,12 +1,11 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "integrate-aikit-gates",
+    "task_id": "license-agpl-v1",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1792507787.8713274,
-    "completed_at": 1792507794.2193348
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1792511165.3885126
   },
   "checkpoints": [
     {
@@ -53,6 +52,32 @@
       "status": "completed",
       "timestamp": 1792507794.2193363,
       "timestamp_str": "2026-10-20 17:49:54"
+    },
+    {
+      "task_id": "license-agpl-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/1] Switch NeuralBeat from Apache-2.0 to AGPL-3.0: replace LICENSE with the canonical text, update the README license section, record ADR-001, run all four project gates, commit and push non-destructively",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1792511149.1682346,
+      "timestamp_str": "2026-10-20 18:45:49",
+      "impact_assessment": {
+        "why": "NeuralBeat still ships under Apache-2.0 while the rest of the portfolio uses AGPL-3.0, so GitHub advertises an inconsistent license and the README repeats the old terms",
+        "benefits": "One license across the portfolio, correct GitHub detection, README and ADR records that match the shipped LICENSE, and a clean legal contract for contributors",
+        "risks": "contract: NeuralBeat moves from permissive Apache-2.0 to copyleft AGPL-3.0; dependency: none; concurrency: none; state: none",
+        "mitigation": "Use the canonical AGPL-3.0 text, keep the change to LICENSE/README/ADR, run python aikit.py check NeuralBeat, stage explicitly, and push only after the commit is verified"
+      }
+    },
+    {
+      "task_id": "license-agpl-v1",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[1/1] LICENSE replaced with canonical AGPL-3.0, README license section updated, ADR-001 recorded; checklists: passed (test, hygiene, guidelines, secrets)",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1792511165.3885126,
+      "timestamp_str": "2026-10-20 18:46:05"
     }
   ]
 }
