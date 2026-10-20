@@ -3,9 +3,10 @@
   "active_task": {
     "task_id": "license-agpl-v1",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
-    "updated_at": 1792511165.3885126
+    "active_phase": 5,
+    "status": "completed",
+    "updated_at": 1792511165.3885126,
+    "completed_at": 1792511272.074859
   },
   "checkpoints": [
     {
@@ -78,6 +79,15 @@
       "status": "in_progress",
       "timestamp": 1792511165.3885126,
       "timestamp_str": "2026-10-20 18:46:05"
+    },
+    {
+      "task_id": "license-agpl-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'license-agpl-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1792511272.0748618,
+      "timestamp_str": "2026-10-20 18:47:52"
     }
   ]
 }
