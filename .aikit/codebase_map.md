@@ -32,7 +32,7 @@
 ---
 
 ### [`SourceCode.py`](SourceCode.py)
-**Size**: `1705` lines (`66409` bytes)
+**Size**: `1705` lines (`66418` bytes)
 
 **Classes:**
 - `class NoiseGenerator` - *Generates blocks of colored noise with state preservation using digital filters.*

@@ -1076,7 +1076,7 @@ def play_audio():
 
 def show_about():
     about_text = """
-This project is licensed under the Apache License Version 2.0, January 2004. I appreciate any donations made on Patreon.
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). I appreciate any donations made on Patreon.
 
 Social Media Accounts:
 
