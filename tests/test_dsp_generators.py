@@ -93,12 +93,14 @@ class TestBinauralGenerator(unittest.TestCase):
 
         self.assertTrue(gen.is_finished)
 
-        # The last part of the last block should be all zeros
+        # The fade-out spans exactly fade_out_len samples; the rest of that block is silent.
         last_block = all_blocks[-1]
-        self.assertTrue(np.all(last_block[-512:] == 0))
+        self.assertTrue(np.any(last_block[:fade_out_len]))
+        self.assertTrue(np.all(last_block[fade_out_len:] == 0))
 
     def test_noise_mixing(self):
         """Test that noise is correctly added to the signal."""
+        np.random.seed(0)
         self.cfg.noise_type = "White"
         self.cfg.noise_volume = 0.5
 

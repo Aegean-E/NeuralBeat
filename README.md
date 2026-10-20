@@ -15,6 +15,45 @@
 
 ---
 
+## ⚡ 30-Second Cold-Start Quick Reference
+
+- **Runtime Prerequisites**: Python 3.10+ with Tk support, plus the packages in `requirements.txt`
+- **Canonical Regression Shield Gate**:
+  ```bash
+  python -m pytest tests
+  ```
+
+### 🛠️ AIKit Commands (run from the AIKit folder)
+
+| Role | Command |
+|---|---|
+| Status, task and gates | `python aikit.py status NeuralBeat` |
+| Phase 4: every gate | `python aikit.py check NeuralBeat` |
+| Resume an interrupted task | `python aikit.py resume NeuralBeat` |
+
+---
+
+## 📦 What's Inside
+
+```text
+NeuralBeat/
+├── .aikit/                    <- ledger, decisions and project guidelines
+├── .github/                   <- repository metadata
+├── screenshots/               <- UI screenshots used by this README
+├── tests/                     <- pytest regression suite
+├── .gitignore
+├── LICENSE
+├── README.md
+├── banner.png
+├── presets.py
+├── requirements.txt
+├── run_tests.py
+├── SourceCode.py
+└── verification.py
+```
+
+---
+
 ## 🌟 Why NeuralBeat?
 
 **NeuralBeat** is a precision-engineered desktop application for generating audio tones. Whether you're interested in meditation, focus enhancement, or audio experimentation, NeuralBeat provides the tools you need.

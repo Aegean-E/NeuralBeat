@@ -27,7 +27,8 @@ def main():
     # Run pytest on tests directory
     result = subprocess.run(
         [sys.executable, "-m", "pytest", "tests", "-v"],
-        cwd=project_root
+        cwd=project_root,
+        timeout=600
     )
     
     print()

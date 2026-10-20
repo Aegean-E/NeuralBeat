@@ -37,6 +37,31 @@ live_status_after_id = None
 play_mode = "manual"  # "manual" or "ramp"
 beat_type_var = None  # "binaural", "monaural", or "isochronic"
 
+# UI widgets and variables are created by main(); placeholders keep the logic functions testable.
+root = None
+left_frequency_entry = None
+left_volume_entry = None
+left_waveform_var = None
+left_waveform_combobox = None
+right_frequency_entry = None
+right_volume_entry = None
+right_waveform_var = None
+right_waveform_combobox = None
+monaural_beats_frame = None
+binaural_beats_frame = None
+isochronic_beats_frame = None
+binaural_monaural_frame = None
+preset_name_entry = None
+preset_category_var = None
+carrier_entry = None
+start_beat_entry = None
+end_beat_entry = None
+ramp_minutes_entry = None
+noise_type_var = None
+noise_volume_entry = None
+status_var = None
+ramp_enabled_var = None
+
 # Defaults
 ramp_carrier_hz = 432.0
 ramp_start_beat_hz = 20.0
@@ -52,6 +77,7 @@ CONFIG_PATH = APP_DIR / "config.json"
 osc_window = None
 visualizer_canvas = None
 visualizer_ax = None
+visualizer_hline = None
 line_left = None
 line_right = None
 OSC_BUFFER_SECONDS = 0.05
@@ -136,7 +162,7 @@ def load_config() -> dict:
 def save_config(cfg: dict) -> None:
     """Saves the configuration dictionary to the JSON file."""
     try:
-        APP_DIR.mkdir(parents=True, exist_ok=True)
+        CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
         CONFIG_PATH.write_text(json.dumps(cfg, indent=2), encoding="utf-8")
     except Exception:
         logger.error(f"Error saving config to {CONFIG_PATH}", exc_info=True)
@@ -665,7 +691,8 @@ class AudioEngine:
                 if self._stream:
                     try:
                         self._stream.close()
-                    except Exception: pass
+                    except Exception:
+                        logger.debug("Could not close audio stream during startup cleanup", exc_info=True)
                     self._stream = None
                 raise e
 
@@ -754,8 +781,8 @@ def set_osc_merge_waves():
     if osc_window and visualizer_ax and visualizer_canvas:
         try:
             # Update horizontal line visibility
-            if hasattr(visualizer_ax, '_hline'):
-                visualizer_ax._hline.set_visible(not is_merged)
+            if visualizer_hline is not None:
+                visualizer_hline.set_visible(not is_merged)
 
             # Update Y-ticks
             if is_merged:
@@ -766,7 +793,8 @@ def set_osc_merge_waves():
                 visualizer_ax.tick_params(axis='y', length=0)
             visualizer_canvas.draw_idle()
         except Exception:
-            pass # Ignore if widgets are being destroyed
+            # The oscilloscope widgets may already be destroyed by a concurrent close.
+            logger.debug("Could not refresh oscilloscope merge state", exc_info=True)
 
 def set_osc_colors(palette_name: str):
     """Sets the oscilloscope color palette and saves to config."""
@@ -787,12 +815,12 @@ def set_osc_colors(palette_name: str):
             line_right.set_color(colors[1])
             visualizer_canvas.draw_idle()
         except Exception:
-            # Ignore errors if window/widgets are in a weird state
-            pass
+            # The oscilloscope widgets may be in an inconsistent state while closing.
+            logger.debug("Could not apply oscilloscope colors", exc_info=True)
 
 def toggle_oscilloscope_window():
     """Opens or closes the real-time oscilloscope window."""
-    global osc_window, visualizer_canvas, visualizer_ax, line_left, line_right
+    global osc_window, visualizer_canvas, visualizer_ax, visualizer_hline, line_left, line_right
     global osc_plot_buffer_l, osc_plot_buffer_r
 
     # If window exists, destroy it and clear references
@@ -801,6 +829,7 @@ def toggle_oscilloscope_window():
         osc_window = None
         visualizer_canvas = None
         visualizer_ax = None
+        visualizer_hline = None
         line_left = None
         line_right = None
         osc_plot_buffer_l = None
@@ -814,7 +843,7 @@ def toggle_oscilloscope_window():
 
     def on_osc_close():
         """Callback for when the oscilloscope window is closed by the user."""
-        global osc_window, visualizer_canvas, visualizer_ax, line_left, line_right
+        global osc_window, visualizer_canvas, visualizer_ax, visualizer_hline, line_left, line_right
         global osc_plot_buffer_l, osc_plot_buffer_r
 
         win_to_destroy = osc_window
@@ -823,6 +852,7 @@ def toggle_oscilloscope_window():
         osc_window = None
         visualizer_canvas = None
         visualizer_ax = None
+        visualizer_hline = None
         line_left = None
         line_right = None
         osc_plot_buffer_l = None
@@ -833,7 +863,7 @@ def toggle_oscilloscope_window():
             try:
                 win_to_destroy.destroy()
             except tk.TclError:
-                pass # Window is already being destroyed
+                logger.debug("Oscilloscope window was already destroyed", exc_info=True)
 
     osc_window.protocol("WM_DELETE_WINDOW", on_osc_close)
 
@@ -869,7 +899,7 @@ def toggle_oscilloscope_window():
     visualizer_ax.yaxis.label.set_color(fg_color)
 
     # Add a horizontal line to separate channels, and store a reference to it
-    visualizer_ax._hline = visualizer_ax.axhline(0, color=fg_color, lw=0.5, ls='--')
+    visualizer_hline = visualizer_ax.axhline(0, color=fg_color, lw=0.5, ls='--')
 
     x_data = np.arange(buffer_size)
     line_left, = visualizer_ax.plot(x_data, osc_plot_buffer_l, lw=1, color=line_color_l)
@@ -881,7 +911,7 @@ def toggle_oscilloscope_window():
 
     # Set initial view based on config
     is_merged = config.get("osc_merge_waves", False)
-    visualizer_ax._hline.set_visible(not is_merged)
+    visualizer_hline.set_visible(not is_merged)
     if is_merged:
         visualizer_ax.set_yticks([-1, 0, 1])
         visualizer_ax.tick_params(axis='y', colors=fg_color, length=4)
@@ -922,7 +952,8 @@ def _run_export_thread(cfg, filename, duration, progress_win, progress_bar, prog
                     if progress_win.winfo_exists():
                         progress_bar['value'] = p
                         progress_label.config(text=f"Generating... {int(p)}%")
-                except Exception: pass
+                except Exception:
+                    logger.debug("Could not update export progress", exc_info=True)
 
             root.after(0, update_ui)
 
@@ -985,7 +1016,8 @@ def export_audio_file():
                     progress_win.destroy()
                 logger.info(f"Exported audio to {fname}")
                 messagebox.showinfo("Export Complete", f"Saved to {fname}")
-            except Exception: pass
+            except Exception:
+                logger.debug("Could not finalize the export success dialog", exc_info=True)
 
         def on_error(e):
             try:
@@ -993,7 +1025,8 @@ def export_audio_file():
                     progress_win.destroy()
                 logger.error("Export failed", exc_info=True)
                 messagebox.showerror("Export Error", f"Export failed: {str(e)}")
-            except Exception: pass
+            except Exception:
+                logger.debug("Could not finalize the export error dialog", exc_info=True)
 
         t = threading.Thread(target=_run_export_thread, args=(cfg, filename, duration, progress_win, progress_bar, progress_label, on_success, on_error))
         t.start()
@@ -1136,7 +1169,7 @@ def import_config_json():
             try:
                 root.style.theme_use(theme.strip())
             except Exception:
-                pass
+                logger.debug("Could not apply the imported theme", exc_info=True)
 
         # Rebuild preset buttons to reflect imported presets
         build_preset_buttons()
@@ -1325,8 +1358,8 @@ def update_live_status():
                         line_right.set_ydata(-0.5 + osc_plot_buffer_r * 0.5)
                     visualizer_canvas.draw_idle()
         except Exception:
-            # Window might have been closed during update. Ignore.
-            pass
+            # The window might have been closed during this update.
+            logger.debug("Live oscilloscope update skipped", exc_info=True)
 
     live_status_after_id = root.after(50, update_live_status)
 
@@ -1456,7 +1489,7 @@ def main():
         if os.path.exists("icon.ico"):
             root.iconbitmap("icon.ico")
     except Exception:
-        pass
+        logger.debug("Could not set the window icon", exc_info=True)
     
     root.protocol("WM_DELETE_WINDOW", on_close)
 

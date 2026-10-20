@@ -17,8 +17,6 @@ mock_scipy.signal = MagicMock()
 
 MOCK_MODULES = {
     'sounddevice': MagicMock(),
-    'tkinter': MagicMock(),
-    'tkinter.ttk': MagicMock(),
     'ttkbootstrap': MagicMock(),
 }
 for mod_name, mock_obj in MOCK_MODULES.items():

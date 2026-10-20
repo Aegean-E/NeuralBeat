@@ -2,6 +2,8 @@
 
 import unittest
 from unittest.mock import patch, MagicMock
+from contextlib import ExitStack
+from functools import wraps
 import os
 import sys
 
@@ -36,25 +38,35 @@ for mod_name, mock_obj in MOCK_MODULES.items():
 import SourceCode
 
 
-# This is a decorator to patch all UI globals for a test function
+# UI globals patched for every logic test, in decoration order.
+UI_GLOBAL_NAMES = (
+    'left_frequency_entry',
+    'right_frequency_entry',
+    'left_volume_entry',
+    'right_volume_entry',
+    'noise_volume_entry',
+    'left_waveform_var',
+    'right_waveform_var',
+    'noise_type_var',
+    'ramp_enabled_var',
+    'beat_type_var',
+    'carrier_entry',
+    'start_beat_entry',
+    'end_beat_entry',
+    'ramp_minutes_entry',
+)
+
+
 def patch_ui_globals(func):
-    @patch('SourceCode.left_frequency_entry', MagicMock())
-    @patch('SourceCode.right_frequency_entry', MagicMock())
-    @patch('SourceCode.left_volume_entry', MagicMock())
-    @patch('SourceCode.right_volume_entry', MagicMock())
-    @patch('SourceCode.noise_volume_entry', MagicMock())
-    @patch('SourceCode.left_waveform_var', MagicMock())
-    @patch('SourceCode.right_waveform_var', MagicMock())
-    @patch('SourceCode.noise_type_var', MagicMock())
-    @patch('SourceCode.ramp_enabled_var', MagicMock())
-    @patch('SourceCode.beat_type_var', MagicMock())
-    @patch('SourceCode.carrier_entry', MagicMock())
-    @patch('SourceCode.start_beat_entry', MagicMock())
-    @patch('SourceCode.end_beat_entry', MagicMock())
-    @patch('SourceCode.ramp_minutes_entry', MagicMock())
+    """Patch every UI global and pass the mocks in the order the tests unpack them."""
+    @wraps(func)
     def wrapper(*args, **kwargs):
-        # The mock objects are passed as arguments by @patch
-        return func(*args, **kwargs)
+        mocks = {name: MagicMock() for name in UI_GLOBAL_NAMES}
+        with ExitStack() as stack:
+            for name in UI_GLOBAL_NAMES:
+                stack.enter_context(patch(f'SourceCode.{name}', mocks[name]))
+            ordered = [mocks[name] for name in reversed(UI_GLOBAL_NAMES)]
+            return func(*args, *ordered, **kwargs)
 
     return wrapper
 

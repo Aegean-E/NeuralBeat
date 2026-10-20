@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "name": "neuralbeat",
+  "test_command": "python -m pytest tests",
+  "gates": {},
+  "created": "2026-10-20"
+}
