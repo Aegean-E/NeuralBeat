@@ -6,11 +6,11 @@
 ---
 
 ## 📊 Codebase Metrics
-- **Total Python Modules**: `15`
-- **Total Classes**: `26`
-- **Total Top-Level Functions**: `35`
-- **Total Class Methods**: `130`
-- **Total Source Lines**: `3751`
+- **Total Python Modules**: `16`
+- **Total Classes**: `27`
+- **Total Top-Level Functions**: `36`
+- **Total Class Methods**: `131`
+- **Total Source Lines**: `3802`
 
 ---
 
@@ -32,7 +32,7 @@
 ---
 
 ### [`SourceCode.py`](SourceCode.py)
-**Size**: `1705` lines (`66418` bytes)
+**Size**: `1705` lines (`66417` bytes)
 
 **Classes:**
 - `class NoiseGenerator` - *Generates blocks of colored noise with state preservation using digital filters.*
@@ -139,6 +139,20 @@
   - Method `.test_stop_when_not_playing(mock_sd)` - *Test that stop() does nothing if not playing.*
   - Method `.test_start_exception(mock_logger, mock_sd)` - *Test exception handling during start.*
   - Method `.test_get_elapsed_time()` - *Test elapsed time calculation.*
+
+---
+
+### [`tests/test_bootstyle_usage.py`](tests/test_bootstyle_usage.py)
+> *Regression shield: ttkbootstrap-only keyword arguments must stay on ttkbootstrap widgets.*
+
+**Size**: `51` lines (`1835` bytes)
+
+**Classes:**
+- `class TestBootstyleUsage`
+  - Method `.test_bootstyle_only_on_ttkbootstrap_widgets()`
+
+**Functions:**
+- `def find_bootstyle_violations(source)`
 
 ---
 

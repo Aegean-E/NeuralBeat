@@ -1655,7 +1655,7 @@ def main():
     switch_container.grid(row=0, column=0, columnspan=2, pady=10)
     ramp_label = ttk.Label(switch_container, text="Enable Ramp")
     ramp_label.pack(side='left', padx=5)
-    ramp_switch = ttk.Checkbutton(switch_container, variable=ramp_enabled_var, bootstyle="success-round-toggle")
+    ramp_switch = tb.Checkbutton(switch_container, variable=ramp_enabled_var, bootstyle="success-round-toggle")
     ramp_switch.pack(side='left')
 
     carrier_label = ttk.Label(ramp_subsection_frame, text="Carrier (Hz):")
