@@ -258,8 +258,8 @@ source venv/bin/activate
 ```
 
 ### Step 3: Install Dependencies
-``` -r requirements.txtbash
-pip install
+```bash
+pip install -r requirements.txt
 ```
 
 ### Step 4: Run NeuralBeat
@@ -445,7 +445,7 @@ Switch themes via the Settings menu.
 
 ## ⚕️ Disclaimer
 
-The information provided in this document about brainwave frequencies and their potential purposes only. Neural effects is for informationalBeat is an audio generation tool and does not make any health claims.
+The information provided in this document about brainwave frequencies and their potential effects is for informational purposes only. NeuralBeat is an audio generation tool and does not make any health claims.
 
 **Important Notes**:
 - Brainwave entrainment may not work for everyone
