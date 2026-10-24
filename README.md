@@ -2,6 +2,8 @@
 
 # NeuralBeat 1.0.0
 
+[![AIKit Integrated](https://img.shields.io/badge/AIKit-integrated-6f42c1)](https://github.com/Aegean-E/AIKit)
+
 **The Ultimate Neuro-Acoustic Desktop Application**
 
 *A scientifically verified, local-first binaural beat, monaural beat, and isochronic tone generator.*
