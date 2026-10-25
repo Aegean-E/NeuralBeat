@@ -46,6 +46,7 @@ NeuralBeat/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
+├── COMMERCIAL.md
 ├── banner.png
 ├── presets.py
 ├── requirements.txt
