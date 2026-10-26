@@ -1076,7 +1076,7 @@ def play_audio():
 
 def show_about():
     about_text = """
-This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). I appreciate any donations made on Patreon.
+This project is free for personal use under the Aegean License 1.1 (AL-1.1); commercial use needs the Aegean Commercial License 1.0 (ACL-1.0). I appreciate any donations made on Patreon.
 
 Social Media Accounts:
 

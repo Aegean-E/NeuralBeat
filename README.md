@@ -2,7 +2,7 @@
 
 # NeuralBeat 1.0.0
 
-[![AIKit Integrated](https://img.shields.io/badge/AIKit-integrated-6f42c1)](https://github.com/Aegean-E/AIKit)
+[![AIKit Integrated](https://img.shields.io/badge/AIKit-integrated-6f42c1)](https://github.com/AegeanWorks/AIKit)
 
 **The Ultimate Neuro-Acoustic Desktop Application**
 
@@ -45,6 +45,8 @@ NeuralBeat/
 ├── tests/                     <- pytest regression suite
 ├── .gitignore
 ├── LICENSE
+├── LICENSES/                 <- REUSE license texts
+├── REUSE.toml                <- Machine-readable SPDX metadata
 ├── README.md
 ├── COMMERCIAL.md
 ├── banner.png
@@ -508,13 +510,11 @@ NeuralBeat is built on a foundation of user trust and privacy:
 
 ---
 
+> **License history:** versions up to and including `agpl-final` remain available under GNU AGPL-3.0.
+
 ## 📜 License
 
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
-
-See the LICENSE file for full details.
-
----
+Free for personal use under the Aegean License 1.1 (AL-1.1); see [LICENSE](LICENSE). Any commercial use needs the Aegean Commercial License 1.0 (ACL-1.0); see [COMMERCIAL.md](COMMERCIAL.md).
 
 ## 🤝 Connect
 

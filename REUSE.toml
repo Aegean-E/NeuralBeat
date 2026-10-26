@@ -1,0 +1,7 @@
+version = 1
+
+[[annotations]]
+path = ["**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 AegeanWorks"
+SPDX-License-Identifier = "LicenseRef-AL-1.1"

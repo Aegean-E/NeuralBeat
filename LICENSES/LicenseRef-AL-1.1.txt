@@ -1,0 +1,305 @@
+# Aegean License 1.1 (AL-1.1)
+
+**Version 1.1 — October 2026**
+**Licensor**: AegeanWorks (`aegean-licensing@proton.me`), Türkiye
+**SPDX identifier**: `LicenseRef-AL-1.1`
+
+> **Counsel note.** This is the operative personal-use license, but it should be reviewed by
+> qualified counsel in the Licensor's jurisdiction before it is relied on in a dispute.
+
+Required Notice: Copyright (c) AegeanWorks. Licensed under the Aegean License 1.1 (AL-1.1). Commercial use requires the Aegean Commercial License (ACL-1.0): aegean-licensing@proton.me
+
+---
+
+## 1. Acceptance
+
+To receive any right under this License, you must accept all of its terms. **Every term is both
+an obligation and a condition of your license.** Any use outside the permissions in Section 3, or
+any breach of Section 5, is outside the scope of this License and is unlicensed use of the
+Covered Material.
+
+---
+
+## 2. Definitions
+
+1. **“Licensor”** means AegeanWorks, the operator of the AegeanWorks and Aegean-E projects.
+   “Aegean-E” is a legacy brand alias for the same licensor.
+2. **“Covered Material”** means only the source code, object code, documentation and other files
+   that (a) are identified as offered under this License and (b) Licensor owns or is authorized
+   to license. Third-party components keep their own licenses.
+3. **“You”** means the individual natural person who accepts this License. This License is never
+   granted to a company or other organization, except the evaluation license in Section 4.3.
+4. **“Your Company”** means any legal entity, sole proprietorship or other organization that you
+   work for, own, or act for, together with every organization that Controls it, is Controlled
+   by it, or is under common Control with it.
+5. **“Control”** means ownership of substantially all the assets of an entity, or the power to
+   direct its management and policies by vote, contract or otherwise. Control may be direct or
+   indirect.
+6. **“Version”** means one release of the Covered Material identified by Licensor, such as a tag,
+   package version or commit.
+
+---
+
+## 3. Permission for Personal Use
+
+### 3.1 Grant
+Subject to this License, Licensor grants You a limited, worldwide, non-exclusive,
+non-transferable, non-sublicensable, royalty-free license to:
+
+1. download and copy the Covered Material for Your own private use;
+2. install, run, inspect and study it on devices You own or control;
+3. modify it for Your own private use; and
+4. keep reasonable private backup copies.
+
+### 3.2 Scope of Personal Use
+These permissions cover **only personal, non-commercial use by You as an individual**, such as
+learning, private study, hobby projects, personal research with no anticipated commercial
+application, and evaluating whether the Covered Material suits You. They never cover use for,
+on behalf of, or for the benefit of Your Company or any other organization.
+
+### 3.3 Student and Self-Study Use
+Personal use **includes** enrolled students and individual learners using the Covered Material
+solely for their own coursework, homework and non-sponsored study. Institutional deployment,
+faculty-led or grant-funded research and campus-wide use are Commercial or Organizational Use.
+
+### 3.4 No Disclosure Duty
+Personal use is free of charge. You need not publish or disclose Your private modifications.
+
+### 3.5 Patent License
+Licensor grants You a license under any patent claims Licensor can license, now or later, that
+Your personal use of the Covered Material as permitted by Section 3.1 would infringe.
+
+---
+
+## 4. Commercial and Organizational Use Requires a Commercial License
+
+**Commercial or Organizational Use is not licensed under this License**, except the evaluation
+in Section 4.3. It requires the Aegean Commercial License (ACL-1.0), evidenced by a License Grant
+Certificate issued by Licensor before the use begins. Licensor alone decides whether to grant it
+and on what terms.
+
+### 4.1 Definition
+**“Commercial or Organizational Use”** means any use of Covered Material:
+
+1. by, for, or on behalf of Your Company, a business, employer, client, public body, educational
+   institution, nonprofit or other organization, including internal operations, automated
+   pipelines, infrastructure and production systems;
+2. in employment, consulting, professional practice, freelancing, or work done for another
+   person or organization, including during billable hours;
+3. to develop, operate, support, market or deliver a product or service for others;
+4. in a paid, monetized, revenue-generating, advertising-supported or sponsored offering;
+5. as part of a hosted service, SaaS, API, cloud or managed service, or service bureau;
+6. in sponsored, grant-funded or institutional research;
+7. to sell, rent, lease, sublicense, distribute, bundle or otherwise exploit Covered Material or a
+   product that incorporates it; or
+8. to give customers, users, coworkers or other third parties access to Covered Material or a
+   modified version.
+
+### 4.2 Commercialization Trigger
+A project begun as personal use becomes Commercial or Organizational Use at the earliest of:
+
+- deployment to a server, cloud environment or device that third parties or the public can reach;
+- receipt of any revenue, client payment, investment, grant or paid sponsorship; or
+- incorporation into an organization's operations, client deliverables or product roadmap.
+
+Use after the trigger without a Commercial License is unlicensed use.
+
+### 4.3 Company Evaluation
+Licensor grants each organization one limited, non-transferable license to evaluate the Covered
+Material for **28 days**, **once per Your Company**: the organization and every organization that
+Controls it, is Controlled by it, or is under common Control with it share one evaluation, as do
+all their personnel and contractors, and it cannot be restarted by a new person, account, copy
+or Version. The evaluation:
+
+1. starts on the first day anyone uses the Covered Material for or on behalf of the organization;
+2. is **non-production** only: internal testing and assessment, with no production data of
+   customers, no revenue, no client work, and nothing a third party or the public can reach;
+3. is subject to Section 5, except that the evaluation itself is not a breach of Section 5 item 1,
+   and copies shared only among the organization's own personnel for it are not supply to others
+   under Section 5 item 2; and
+4. ends at the earlier of 28 days or the issuance of an Aegean Commercial License certificate to
+   the organization. At the end, the organization must either hold that license or stop all use
+   and delete every copy made for the evaluation.
+
+On Licensor's written request, the organization will state when its evaluation began.
+
+---
+
+## 5. Restrictions
+
+Except as Section 3 expressly allows, You must not, without Licensor's prior written permission:
+
+1. make any Commercial or Organizational Use of the Covered Material;
+2. publish, distribute, sell, sublicense, rent, lease or otherwise supply copies to anyone;
+3. publish or distribute modified versions, forks, ports or derivative works (subject to Section 8);
+4. host the Covered Material or make it available to others, including through a download site,
+   package registry, mirror, app store or public server;
+5. incorporate it into any product, project, service or distribution meant for others;
+6. **use it, or any part of it, to train, fine-tune, evaluate or benchmark a machine-learning or
+   artificial-intelligence model, or include it in a dataset for that purpose.** Running the
+   software, and using AI tools to read or edit Your own private copy, are not prohibited;
+7. **move, change, disable or circumvent any license check, license key, certificate
+   verification or other technical measure** in the Covered Material that limits its use;
+8. remove, obscure or alter any copyright, authorship, license or proprietary notice, including
+   the `Required Notice:` line above; or
+9. claim or imply that Licensor endorses You, Your product or Your modified version.
+
+### 5.1 Notices on Modified Copies
+Every copy You keep, modified or not, must retain this License and every `Required Notice:`
+line. A modified copy must carry a prominent notice that You changed it.
+
+### 5.2 Your Own Work
+This License claims no ownership of independent work You create by running the Covered Material,
+such as Your own documents, code or data, unless that work contains Covered Material. Creating
+or delivering work for Your Company, a client, an employer or a commercial offering is still
+Commercial or Organizational Use and needs a Commercial License.
+
+---
+
+## 6. Patent Defense
+
+If You, or Your Company, make any written claim that the Covered Material infringes or
+contributes to infringement of any patent, Your patent license under Section 3.5 ends
+immediately, and all Your other rights under this License end 30 days later.
+
+---
+
+## 7. Ownership and Contributions
+
+Covered Material is licensed, not sold. Licensor and its licensors keep every right this License
+does not expressly grant. No ownership of any intellectual property passes to You.
+
+Third-party components are not Covered Material. Their own licenses and notices govern, and this
+License grants no rights in them.
+
+Contributions to Licensor's repositories are accepted only under the **AegeanWorks Contributor
+License Agreement** (`licenses/CONTRIBUTING_CLA.md`), which lets Licensor license each
+contribution under this License, the Aegean Commercial License and any later terms.
+
+---
+
+## 8. Public Repositories and Hosting Platforms
+
+If Covered Material is posted on a platform such as GitHub, that platform's terms may let users
+view or fork it there. A fork on that platform is permitted only for personal study or for
+preparing contributions to Licensor's upstream repository, and only while it keeps every notice
+and is not offered as an independent, competing or commercial product. The platform's ability to
+view or fork grants no other right.
+
+---
+
+## 9. Separate Commercial License
+
+A commercial or organizational license is effective only when granted under the Aegean
+Commercial License (`licenses/ACL-1.0.md`) and evidenced by a License Grant Certificate issued by
+Licensor. Contacting Licensor, or receiving no reply, is not authorization.
+
+Inquiries & licensing: **`aegean-licensing@proton.me`**
+
+---
+
+## 10. Versions and Restricted Releases
+
+1. **Each Version is licensed separately.** This License applies to a Version only if Licensor
+   released that Version under it.
+2. **Later Versions may be restricted.** Licensor may release later Versions under different
+   terms, including an all-rights-reserved notice that grants no license, or may stop releasing
+   them. That does not change the license You already hold for a Version You received under this
+   License.
+3. **Earlier licenses are preserved.** Nothing in this License cancels or narrows rights already
+   granted for a particular copy under an earlier license, including GNU AGPL-3.0 for copies
+   Licensor released under it. Licensor applies this License to an older Version only where it
+   controls the necessary rights, and marks that release clearly.
+4. **How a Version's license is identified.** The license of a Version is the `LICENSE` file
+   contained in that Version as Licensor released it.
+
+---
+
+## 11. Termination and Cure
+
+1. **Automatic termination.** Your rights under this License end automatically if You breach any
+   of its terms. Termination covers **every Version** You received under this License.
+2. **First breach: one cure period.** If Licensor notifies You in writing of Your first breach and
+   You stop all violation and correct past violations within **30 days** of receiving the notice,
+   Your rights are reinstated.
+3. **Repeat breach: permanent.** After a reinstatement, any further breach ends Your rights
+   permanently, with no further cure period.
+4. **Commercial cure.** For unauthorized Commercial or Organizational Use, Licensor may instead,
+   at its sole discretion and in place of infringement proceedings, offer to cure the breach
+   through an Aegean Commercial License covering the full period of unauthorized use, at the
+   applicable fees plus an unauthorized-use administrative fee. The prior use is licensed only
+   when that license is executed and paid.
+5. **After termination**, You must stop using the Covered Material and delete every copy in Your
+   possession or control, except where law requires You to keep it.
+6. **Notice.** Licensor may give notice to any contact address You have given Licensor, or to an
+   account, repository or listing through which You use, publish or offer the Covered Material,
+   including by an issue or message on that platform. Notice is received when it is sent.
+7. **Survival.** Sections 7, 11.5 and 12 to 15 survive termination.
+
+---
+
+## 12. Fair Use and Mandatory Rights
+
+This License does not limit any fair use, fair dealing or other right that applicable law grants
+You and does not allow a license to restrict.
+
+### 12.1 Security Research
+
+Good-faith security research on a copy You are licensed to use, and coordinated disclosure of a
+vulnerability, are permitted. Section 5.7 does not prohibit testing Your own copy, reverse
+engineering for interoperability or security analysis where law allows, or reporting a
+vulnerability to Licensor. This permission does not authorize bypassing a license check for
+unlicensed use or attacking a third party's system.
+
+---
+
+## 13. Disclaimer of Warranty
+
+To the maximum extent permitted by law, the Covered Material is provided **“AS IS” and “AS
+AVAILABLE,”** without warranties or conditions of any kind, express, implied or statutory,
+including merchantability, fitness for a particular purpose, title, non-infringement, accuracy
+and uninterrupted operation.
+
+---
+
+## 14. Limitation of Liability
+
+To the maximum extent permitted by law, Licensor is not liable for any indirect, incidental,
+special, exemplary, punitive or consequential damages, or for loss of data, profits, revenue,
+business or goodwill, arising from this License or the Covered Material.
+
+---
+
+## 15. General Terms
+
+- **No other rights.** This License implies no right beyond those it expressly grants. You may not
+  sublicense or transfer it. It does not limit Licensor's right to license the Covered Material
+  to others on any terms.
+- **Trademarks.** No right to use the names "AegeanWorks" or "Aegean-E", any project name, logo or
+  emblem, except to identify the Covered Material accurately.
+- **Export and sanctions.** You must comply with applicable export-control and sanctions laws.
+- **Moral rights.** Nothing in this License transfers or waives an author's moral rights. Where the
+  law grants them, they remain with the author; Licensor consents to the modifications this
+  License permits only to the extent necessary to exercise those permissions.
+- **Data protection and consumer law.** You must comply with applicable data-protection and
+  consumer-protection law. Nothing in this License limits a mandatory consumer right, including a
+  refund or conformity claim under the law of Your residence.
+- **License compatibility.** This License is not compatible with GPL-3.0 or AGPL-3.0. Do not combine
+  Covered Material with code under those licenses in a way that would require either license to be
+  replaced; ask Licensor for a separate permission.
+- **No waiver.** A failure or delay in enforcing a term is not a waiver of it.
+- **Severability.** If a term is held unenforceable, it is limited to the minimum extent needed and
+  the remaining terms stay in effect. In particular, if Section 5.6 is held unenforceable, every
+  other restriction still applies.
+- **Governing law and venue.** This License is governed by the laws of the Republic of Türkiye,
+  without regard to conflict-of-law rules. The courts of Istanbul, Türkiye have exclusive
+  jurisdiction, subject to any mandatory consumer protection rules.
+- **Language.** This License is written in English. A translation is for convenience only; if
+  they differ, the English text controls.
+- **Entire license.** This document states every permission granted for Covered Material under
+  this License. A License Grant Certificate under the Aegean Commercial License controls any
+  matter within its scope.
+
+---
+
+**End of the Aegean License 1.1 (AL-1.1)**
