@@ -53,7 +53,6 @@ NeuralBeat/
 ├── REUSE.toml                <- Machine-readable SPDX metadata
 ├── README.md
 ├── COMMERCIAL.md
-├── banner.png
 ├── presets.py
 ├── requirements.txt
 ├── run_tests.py
