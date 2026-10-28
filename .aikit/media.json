@@ -14,46 +14,39 @@
   "layout": "wave",
   "assets": {
     "logo": {
-      "path": "assets/logo.svg",
+      "path": "assets/logo.png",
       "status": "approved",
       "commit": "",
-      "generated_at": "2026-10-28T08:46:39",
+      "generated_at": "2026-10-28T11:42:27",
       "review": {
         "status": "approved",
         "reviewer": "subagent:vision-review",
         "method": "vision",
-        "notes": "NE pulse line, legible, medical-relevant",
+        "notes": "Monogram NB matches project; legible, unclipped, no overlaps/watermark, premium.",
         "score": 91,
-        "reviewed_at": "2026-10-28T08:58:20"
+        "reviewed_at": "2026-10-28T11:49:28"
       }
     },
     "social_preview": {
-      "path": "assets/social-preview.svg",
+      "path": "assets/social-preview.png",
       "status": "approved",
       "commit": "",
-      "generated_at": "2026-10-28T08:46:39",
+      "generated_at": "2026-10-28T11:42:27",
       "review": {
         "status": "approved",
         "reviewer": "subagent:vision-review",
         "method": "vision",
-        "notes": "Consistent template, legible",
+        "notes": "Strong hierarchy; legible, unclipped; premium card, no watermark.",
         "score": 90,
-        "reviewed_at": "2026-10-28T08:58:20"
+        "reviewed_at": "2026-10-28T11:49:28"
       }
     },
-    "social_preview_png": {
-      "path": "assets/social-preview.png",
-      "status": "approved",
+    "artwork": {
+      "path": "assets/artwork.jpg",
+      "status": "pending_review",
       "commit": "",
-      "generated_at": "2026-10-28T08:46:40",
-      "review": {
-        "status": "approved",
-        "reviewer": "subagent:vision-review",
-        "method": "structural",
-        "notes": "Rendered from the approved 1280x640 social SVG; exact dimensions verified.",
-        "score": null,
-        "reviewed_at": "2026-10-28T09:01:38"
-      }
+      "generated_at": "2026-10-28T11:42:27",
+      "review": null
     }
   },
   "screenshots": []
