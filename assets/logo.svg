@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">NeuralBeat logo</title>
+  <desc id="desc">A geometric monogram for NeuralBeat from AegeanWorks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#100b1f"/><stop offset="1" stop-color="#2b1750"/></linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f5f3ff"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#fbbf24" stroke-opacity="0.22" stroke-width="2"/>
+  <circle cx="256" cy="256" r="132" fill="none" stroke="#fbbf24" stroke-opacity="0.30" stroke-width="2"/>
+  <path d="M126 314c44-72 88-108 132-108s88 36 132 108" fill="none" stroke="#fbbf24" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round"/>
+  <path d="M126 338c44 46 88 70 132 70s88-24 132-70" fill="none" stroke="#f5f3ff" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round"/>
+  <text x="256" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="132" font-weight="700" fill="url(#ac)" letter-spacing="2">NE</text>
+  <text x="256" y="424" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" letter-spacing="8" fill="#f5f3ff" fill-opacity="0.62">AEGEANWORKS</text>
+</svg>

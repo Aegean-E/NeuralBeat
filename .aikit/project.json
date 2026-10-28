@@ -3,5 +3,42 @@
   "name": "neuralbeat",
   "test_command": "python -m pytest tests",
   "gates": {},
-  "created": "2026-10-20"
+  "created": "2026-10-20",
+  "has_ui": true,
+  "ui_kind": "desktop",
+  "ui_evidence": [
+    "requirements.txt"
+  ],
+  "ui_checked_at": "2026-10-28",
+  "ui_source": "detected",
+  "topics": [
+    "aikit",
+    "binaural-beats",
+    "brainwave-entrainment",
+    "cognitive-enhancement",
+    "desktop-application",
+    "focus",
+    "isochronic-tones",
+    "meditation",
+    "monaural-beats",
+    "neuroscience",
+    "offline-tool",
+    "python-audio",
+    "relaxation",
+    "signal-processing",
+    "sleep",
+    "biohacking",
+    "lightweight",
+    "neurotech",
+    "source-available",
+    "aegeanworks"
+  ],
+  "topics_source": "ai:kilo:2026-10-27",
+  "topics_reviewed_at": "2026-10-28",
+  "topics_choice": [
+    "aegeanworks"
+  ],
+  "topics_choice_round3": [
+    "signal-processing"
+  ]
 }
