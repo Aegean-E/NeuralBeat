@@ -1,20 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc" data-motif="pulse" data-layout="wave">
   <title id="title">NeuralBeat social preview</title>
   <desc id="desc">The Ultimate Neuro-Acoustic Desktop Application</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#100b1f"/><stop offset="1" stop-color="#2b1750"/></linearGradient>
-    <radialGradient id="glow" cx="0.2" cy="0.15" r="0.9"><stop offset="0" stop-color="#fbbf24" stop-opacity="0.30"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0f0a"/><stop offset="1" stop-color="#14261a"/></linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.12" r="0.95"><stop offset="0" stop-color="#86efac" stop-opacity="0.28"/><stop offset="1" stop-color="#86efac" stop-opacity="0"/></radialGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#86efac"/><stop offset="1" stop-color="#facc15"/></linearGradient>
   </defs>
   <rect width="1280" height="640" fill="url(#bg)"/>
   <rect width="1280" height="640" fill="url(#glow)"/>
-  <g opacity="0.16" stroke="#f5f3ff">
-    <path d="M0 160h1280M0 320h1280M0 480h1280M256 0v640M512 0v640M768 0v640M1024 0v640"/>
+  
+  <g opacity="0.15" stroke="#F8FAFC">
+    <path d="M0 128H1280M0 256H1280M0 384H1280M0 512H1280M256 0V640M512 0V640M768 0V640M1024 0V640"/>
   </g>
-  <rect x="64" y="112" width="176" height="176" rx="42" fill="#100b1f" stroke="#fbbf24" stroke-opacity="0.55" stroke-width="2"/>
-  <circle cx="152" cy="200" r="58" fill="none" stroke="#fbbf24" stroke-opacity="0.45" stroke-width="2"/>
-  <text x="152" y="224" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="62" font-weight="700" fill="#fbbf24">NE</text>
-  <text x="300" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700" fill="#f5f3ff">NeuralBeat</text>
-  <text x="300" y="250" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#f5f3ff" fill-opacity="0.78">The Ultimate Neuro-Acoustic Desktop Application</text>
-  <text x="64" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="22" letter-spacing="6" fill="#f5f3ff" fill-opacity="0.55">AEGEANWORKS · DESKTOP</text>
-  <text x="1216" y="560" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#fbbf24">github.com/AegeanWorks/NeuralBeat</text>
+  <g transform="translate(190 300) scale(2.0)" opacity="1.0"><path d="M-62 4H-36L-24 -34L-4 38L16 -24L30 4H62" fill="none" stroke="#86efac" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="-24" r="5" fill="#facc15"/></g>
+  <text x="390" y="246" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="700" fill="#F8FAFC">NeuralBeat</text><text x="392" y="292" font-family="Segoe UI, Arial, sans-serif" font-size="21" letter-spacing="5" fill="#86efac">AEGEANWORKS · DESKTOP</text>
+  <text x="392" y="344" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#F8FAFC" fill-opacity="0.74">The Ultimate Neuro-Acoustic Desktop Application</text>
+  <rect x="392" y="500" width="76" height="38" rx="19" fill="#0B1220" fill-opacity="0.55" stroke="#94A3B8" stroke-opacity="0.35"/><text x="430.0" y="525" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#F8FAFC" fill-opacity="0.82">aikit</text><rect x="570" y="500" width="166" height="38" rx="19" fill="#0B1220" fill-opacity="0.55" stroke="#94A3B8" stroke-opacity="0.35"/><text x="653.0" y="525" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#F8FAFC" fill-opacity="0.82">binaural beats</text><rect x="888" y="500" width="236" height="38" rx="19" fill="#0B1220" fill-opacity="0.55" stroke="#94A3B8" stroke-opacity="0.35"/><text x="1006.0" y="525" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#F8FAFC" fill-opacity="0.82">brainwave entrainm</text>
+  <text x="76" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="19" letter-spacing="6" fill="#F8FAFC" fill-opacity="0.50">AEGEANWORKS</text>
+  <text x="1204" y="592" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#86efac">github.com/AegeanWorks/NeuralBeat</text>
 </svg>

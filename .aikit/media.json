@@ -5,53 +5,48 @@
   "has_ui": true,
   "ui_kind": "desktop",
   "palette": [
-    "#100b1f",
-    "#2b1750",
-    "#fbbf24",
-    "#f5f3ff"
+    "#0a0f0a",
+    "#14261a",
+    "#86efac",
+    "#facc15"
   ],
+  "motif": "pulse",
+  "layout": "wave",
   "assets": {
     "logo": {
       "path": "assets/logo.svg",
       "status": "approved",
       "commit": "",
-      "generated_at": "2026-10-28T08:02:11",
+      "generated_at": "2026-10-28T08:46:39",
       "review": {
         "status": "approved",
         "reviewer": "subagent:vision-review",
         "method": "vision",
-        "notes": "NE monogram, purple gradient, subtitle aligned and readable.",
-        "score": 94,
-        "reviewed_at": "2026-10-28T08:10:41"
+        "notes": "NE pulse line, legible, medical-relevant",
+        "score": 91,
+        "reviewed_at": "2026-10-28T08:58:20"
       }
     },
     "social_preview": {
       "path": "assets/social-preview.svg",
       "status": "approved",
       "commit": "",
-      "generated_at": "2026-10-28T08:02:11",
+      "generated_at": "2026-10-28T08:46:39",
       "review": {
         "status": "approved",
         "reviewer": "subagent:vision-review",
         "method": "vision",
-        "notes": "NE icon, title, Neuro-Acoustic description, DESKTOP tag, gold gradient.",
-        "score": 94,
-        "reviewed_at": "2026-10-28T08:10:41"
+        "notes": "Consistent template, legible",
+        "score": 90,
+        "reviewed_at": "2026-10-28T08:58:20"
       }
     },
     "social_preview_png": {
       "path": "assets/social-preview.png",
-      "status": "approved",
+      "status": "pending_review",
       "commit": "",
-      "generated_at": "2026-10-28T08:02:12",
-      "review": {
-        "status": "approved",
-        "reviewer": "subagent:vision-review",
-        "method": "structural",
-        "notes": "Rendered from the approved 1280x640 social SVG; exact dimensions verified.",
-        "score": null,
-        "reviewed_at": "2026-10-28T08:15:52"
-      }
+      "generated_at": "2026-10-28T08:46:40",
+      "review": null
     }
   },
   "screenshots": []
