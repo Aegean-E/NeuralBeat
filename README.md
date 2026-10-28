@@ -3,8 +3,8 @@
 # NeuralBeat 1.0.0
 
 <!-- aegean:media:start -->
-<p align="center"><img src="assets/logo.jpg" alt="NeuralBeat logo" width="96" height="96"></p>
 <p align="center"><img src="assets/social-preview.png" alt="NeuralBeat social preview" width="100%"></p>
+*Brand assets are generated and may not fully represent the project scope.*
 <!-- aegean:media:end -->
 
 [![AIKit Integrated](https://img.shields.io/badge/AIKit-integrated-6f42c1)](https://github.com/AegeanWorks/AIKit)
@@ -17,7 +17,6 @@
 
 
 <div align="left">
-  <img src="banner.png" width="1080" alt="NeuralBeat - Banner">
 </div>
 
 ---
