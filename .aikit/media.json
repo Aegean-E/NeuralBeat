@@ -41,10 +41,17 @@
     },
     "social_preview_png": {
       "path": "assets/social-preview.png",
-      "status": "pending_review",
+      "status": "approved",
       "commit": "",
       "generated_at": "2026-10-28T08:02:12",
-      "review": null
+      "review": {
+        "status": "approved",
+        "reviewer": "subagent:vision-review",
+        "method": "structural",
+        "notes": "Rendered from the approved 1280x640 social SVG; exact dimensions verified.",
+        "score": null,
+        "reviewed_at": "2026-10-28T08:15:52"
+      }
     }
   },
   "screenshots": []
