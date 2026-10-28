@@ -3,7 +3,7 @@
 # NeuralBeat 1.0.0
 
 <!-- aegean:media:start -->
-<p align="center"><img src="assets/logo.png" alt="NeuralBeat logo" width="96" height="96"></p>
+<p align="center"><img src="assets/logo.jpg" alt="NeuralBeat logo" width="96" height="96"></p>
 <p align="center"><img src="assets/social-preview.png" alt="NeuralBeat social preview" width="100%"></p>
 <!-- aegean:media:end -->
 

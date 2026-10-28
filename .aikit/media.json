@@ -15,17 +15,31 @@
   "assets": {
     "logo": {
       "path": "assets/logo.jpg",
-      "status": "pending_review",
+      "status": "approved",
       "commit": "",
       "generated_at": "2026-10-28T15:56:43",
-      "review": null
+      "review": {
+        "status": "approved",
+        "reviewer": "subagent:vision-review",
+        "method": "vision",
+        "notes": "Neural Beat AUDIO",
+        "score": 93,
+        "reviewed_at": "2026-10-28T17:52:09"
+      }
     },
     "social_preview": {
-      "path": "assets/social-preview.jpg",
-      "status": "pending_review",
+      "path": "assets/social-preview.png",
+      "status": "approved",
       "commit": "",
-      "generated_at": "2026-10-28T17:05:46",
-      "review": null
+      "generated_at": "2026-10-28T17:40:38",
+      "review": {
+        "status": "approved",
+        "reviewer": "subagent:vision-review",
+        "method": "vision",
+        "notes": "Neural Beat\nA U D I O",
+        "score": 93,
+        "reviewed_at": "2026-10-28T17:52:09"
+      }
     }
   },
   "screenshots": [],
