@@ -13,6 +13,9 @@
   "ui_source": "detected",
   "topics": [
     "aikit",
+    "source-available",
+    "aegean-license",
+    "commercial-license",
     "binaural-beats",
     "brainwave-entrainment",
     "cognitive-enhancement",
@@ -28,10 +31,7 @@
     "signal-processing",
     "sleep",
     "biohacking",
-    "lightweight",
-    "neurotech",
-    "source-available",
-    "aegeanworks"
+    "lightweight"
   ],
   "topics_source": "ai:kilo:2026-10-27",
   "topics_reviewed_at": "2026-10-28",
@@ -40,5 +40,10 @@
   ],
   "topics_choice_round3": [
     "signal-processing"
+  ],
+  "license_topics": [
+    "source-available",
+    "aegean-license",
+    "commercial-license"
   ]
 }
