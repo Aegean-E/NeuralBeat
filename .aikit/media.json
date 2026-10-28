@@ -14,40 +14,20 @@
   "layout": "wave",
   "assets": {
     "logo": {
-      "path": "assets/logo.png",
-      "status": "approved",
-      "commit": "",
-      "generated_at": "2026-10-28T13:53:32",
-      "review": {
-        "status": "approved",
-        "reviewer": "subagent:brand-review",
-        "method": "vision",
-        "notes": "NB monogram badge on rounded square, eyebrow AUDIO, title-case Neural Beat on one line, clean hierarchy, no footer. Artwork (brain/eye symbol) fits neuro-acoustic stimulation.",
-        "score": 84,
-        "reviewed_at": "2026-10-28T14:00:00"
-      }
-    },
-    "social_preview": {
-      "path": "assets/social-preview.png",
-      "status": "approved",
-      "commit": "",
-      "generated_at": "2026-10-28T13:53:32",
-      "review": {
-        "status": "approved",
-        "reviewer": "subagent:brand-review",
-        "method": "vision",
-        "notes": "Title 'Neural Beat' crisp white; tagline 'Precision binaural beats for focus, calm and sleep.' fully visible with no ellipsis; chips readable; GitHub URL legible; glowing circular binaural graphic fits neuro-acoustic theme; no clipping or overlap.",
-        "score": 94,
-        "reviewed_at": "2026-10-28T14:00:00"
-      }
-    },
-    "artwork": {
-      "path": "assets/artwork.jpg",
+      "path": "assets/logo.jpg",
       "status": "pending_review",
       "commit": "",
-      "generated_at": "2026-10-28T13:44:25",
+      "generated_at": "2026-10-28T15:56:43",
+      "review": null
+    },
+    "social_preview": {
+      "path": "assets/social-preview.jpg",
+      "status": "pending_review",
+      "commit": "",
+      "generated_at": "2026-10-28T17:05:46",
       "review": null
     }
   },
-  "screenshots": []
+  "screenshots": [],
+  "model": "community/scriptsnsenses-sys/flux-2-dev-free"
 }
