@@ -207,9 +207,8 @@ Inquiries & licensing: **`aegean-licensing@proton.me`**
    them. That does not change the license You already hold for a Version You received under this
    License.
 3. **Earlier licenses are preserved.** Nothing in this License cancels or narrows rights already
-   granted for a particular copy under an earlier license, including GNU AGPL-3.0 for copies
-   Licensor released under it. Licensor applies this License to an older Version only where it
-   controls the necessary rights, and marks that release clearly.
+   granted for a particular copy under an earlier license. Licensor applies this License to an
+   older Version only where it controls the necessary rights, and marks that release clearly.
 4. **How a Version's license is identified.** The license of a Version is the `LICENSE` file
    contained in that Version as Licensor released it.
 
@@ -284,9 +283,9 @@ business or goodwill, arising from this License or the Covered Material.
 - **Data protection and consumer law.** You must comply with applicable data-protection and
   consumer-protection law. Nothing in this License limits a mandatory consumer right, including a
   refund or conformity claim under the law of Your residence.
-- **License compatibility.** This License is not compatible with GPL-3.0 or AGPL-3.0. Do not combine
-  Covered Material with code under those licenses in a way that would require either license to be
-  replaced; ask Licensor for a separate permission.
+- **License compatibility.** This License is not compatible with copyleft licenses that would
+  require it to be replaced. Do not combine Covered Material with code under such a license; ask
+  Licensor for a separate permission.
 - **No waiver.** A failure or delay in enforcing a term is not a waiver of it.
 - **Severability.** If a term is held unenforceable, it is limited to the minimum extent needed and
   the remaining terms stay in effect. In particular, if Section 5.6 is held unenforceable, every
