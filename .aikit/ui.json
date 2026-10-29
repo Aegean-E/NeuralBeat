@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "surfaces": {
+    "app": {
+      "paths": [
+        "SourceCode.py"
+      ]
+    }
+  },
+  "protected": [
+    "tests/**"
+  ],
+  "commands": {
+    "fast": "python -m pytest tests",
+    "snapshot": ""
+  },
+  "style": {
+    "theme_paths": []
+  },
+  "limits": {
+    "max_files": 12,
+    "max_lines": 300
+  }
+}
