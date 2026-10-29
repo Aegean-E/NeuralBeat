@@ -7,10 +7,10 @@
 
 ## 📊 Codebase Metrics
 - **Total Python Modules**: `16`
-- **Total Classes**: `27`
+- **Total Classes**: `28`
 - **Total Top-Level Functions**: `36`
-- **Total Class Methods**: `132`
-- **Total Source Lines**: `3842`
+- **Total Class Methods**: `135`
+- **Total Source Lines**: `3894`
 
 ---
 
@@ -32,7 +32,7 @@
 ---
 
 ### [`SourceCode.py`](SourceCode.py)
-**Size**: `1727` lines (`67505` bytes)
+**Size**: `1735` lines (`67918` bytes)
 
 **Classes:**
 - `class NoiseGenerator` - *Generates blocks of colored noise with state preservation using digital filters.*
@@ -183,7 +183,7 @@
 ### [`tests/test_config_presets.py`](tests/test_config_presets.py)
 > *Test config and preset management functions.*
 
-**Size**: `281` lines (`9637` bytes)
+**Size**: `325` lines (`11115` bytes)
 
 **Classes:**
 - `class TestNormalizeCategory` - *Test _normalize_category function.*
@@ -215,6 +215,10 @@
   - Method `.tearDownClass()`
   - Method `.test_remove_existing_preset()` - *Test removing existing preset returns True.*
   - Method `.test_remove_nonexistent_preset()` - *Test removing nonexistent preset returns False.*
+- `class TestImportConfigIsochronic` - *Test that profile import keeps isochronic presets.*
+  - Method `.setUpClass()`
+  - Method `.tearDownClass()`
+  - Method `.test_import_keeps_isochronic_presets()`
 
 ---
 

@@ -1,62 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "reforge:run-1",
+    "task_id": "reforge:run-2",
     "last_phase": "phase 5",
     "active_phase": 5,
     "status": "in_progress",
-    "updated_at": 1793294819.8232684,
+    "updated_at": 1793295008.6153092,
     "owner": "opencode:reforge-fix",
     "started_by": "opencode:reforge-fix",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "fix-fresh-install-report-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: repair the ramp-switch bootstyle launch crash (ttk.Checkbutton -> tb.Checkbutton) with a failing-first static regression test; [2/3] compact vertical paddings so the window fits 1366x768 work areas; [3/3] repair the mangled README Step 3 install block and disclaimer",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792617949.1831229,
-      "timestamp_str": "2026-10-22 00:25:49",
-      "impact_assessment": {
-        "why": "A fresh clone crashes on launch because the ramp toggle passes the ttkbootstrap-only bootstyle kwarg to a standard ttk.Checkbutton; the ~729px tall window overflows 768px work areas so the Generate/Stop bar hides behind the taskbar; and the README Step 3 code block is mangled, so a clean install cannot run or follow the guide",
-        "benefits": "App launches on every platform again; bottom control bar visible on 1366x768 with clearance; copy-paste install instructions work; a dependency-free regression test keeps ttkbootstrap-only kwargs off standard ttk/tk widgets",
-        "risks": "contract: widget class swap is styling-only, no API or state change; dependency: none added (new test uses stdlib ast); concurrency: none; state: none",
-        "mitigation": "tb.Checkbutton is the documented ttkbootstrap drop-in already used for tb.Window/tb.Toplevel; verify with a real-ttkbootstrap launch smoke test on a withdrawn window plus the full project gate suite before each commit"
-      }
-    },
-    {
-      "task_id": "fix-fresh-install-report-v1",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[1/3] Ramp switch now built with tb.Checkbutton; new tests/test_bootstyle_usage.py demonstrated failing-first (flagged SourceCode.py:1658) and passes after the fix; launch verified end-to-end with real ttkbootstrap 2.2.3 on a withdrawn window (LAUNCH-OK, 1109x664 requested); checklists: passed (test, hygiene, guidelines, secrets)",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792619604.7910922,
-      "timestamp_str": "2026-10-22 00:53:24"
-    },
-    {
-      "task_id": "fix-fresh-install-report-v1",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/3] Applied the reporter's compaction table (preset buttons pady 10->3, frequency rows 10->5, noise/ramp rows 6->4, advanced containers 5->4, bottom bar 10->6); launch smoke test on a withdrawn window: requested geometry 1109x664 -> 1109x596, matching the reported 729 -> 645 reduction on Linux; checklists: passed (test, hygiene, guidelines, secrets)",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792619944.6377594,
-      "timestamp_str": "2026-10-22 00:59:04"
-    },
-    {
-      "task_id": "fix-fresh-install-report-v1",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] README Step 3 code block restored to a proper bash fence with 'pip install -r requirements.txt'; disclaimer sentence repaired to the reporter's reconstruction; checklists: passed (test, hygiene, guidelines, secrets)",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792619977.935985,
-      "timestamp_str": "2026-10-22 00:59:37"
-    },
     {
       "task_id": "fix-fresh-install-report-v1",
       "phase": "completed",
@@ -237,6 +191,49 @@
       "status": "in_progress",
       "timestamp": 1793294819.8232684,
       "timestamp_str": "2026-10-29 20:26:59",
+      "agent": "opencode:reforge-fix"
+    },
+    {
+      "task_id": "reforge:run-2",
+      "phase": "reforge run",
+      "phase_num": 3,
+      "description": "run started (start=2, step=3, stop=2)",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793294885.7435987,
+      "timestamp_str": "2026-10-29 20:28:05",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-2",
+      "phase": "reforge stage 1",
+      "phase_num": 3,
+      "description": "Reforge stage 1: window 2, 2 commit(s), 9 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "completed",
+      "timestamp": 1793294889.9821756,
+      "timestamp_str": "2026-10-29 20:28:09",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-2",
+      "phase": "phase 5",
+      "phase_num": 5,
+      "description": "checklists: passed; isochronic presets survive profile import, regression test added; tests 81 passed; gates 4/4",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793295008.6153092,
+      "timestamp_str": "2026-10-29 20:30:08",
+      "agent": "opencode:reforge-fix"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "superseded",
+      "phase_num": 5,
+      "description": "Superseded by 'reforge:run-2' without --complete or --reset",
+      "status": "superseded",
+      "timestamp": 1793295008.6153092,
+      "timestamp_str": "2026-10-29 20:30:08",
       "agent": "opencode:reforge-fix"
     }
   ]

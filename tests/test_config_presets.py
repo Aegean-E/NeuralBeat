@@ -277,5 +277,49 @@ class TestRemoveUserPreset(unittest.TestCase):
         self.assertFalse(result)
 
 
+class TestImportConfigIsochronic(unittest.TestCase):
+    """Test that profile import keeps isochronic presets."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.patcher = patch.dict(sys.modules, modules_to_patch)
+        cls.patcher.start()
+        import SourceCode as sc
+        cls.sc = sc
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.patcher.stop()
+
+    def test_import_keeps_isochronic_presets(self):
+        payload = {
+            "user_presets": {
+                "Monaural": [],
+                "Binaural": [],
+                "Isochronic": [
+                    {"label": "Low Theta", "carrier_hz": 432, "pulse_hz": 4}
+                ],
+            }
+        }
+        with tempfile.NamedTemporaryFile(
+            "w", suffix=".json", delete=False, encoding="utf-8"
+        ) as handle:
+            json.dump(payload, handle)
+            path = handle.name
+        self.addCleanup(os.unlink, path)
+
+        with patch.object(self.sc.filedialog, "askopenfilename", return_value=path), \
+                patch.object(self.sc, "save_config"), \
+                patch.object(self.sc, "build_preset_buttons"), \
+                patch.object(self.sc, "root", MagicMock()), \
+                patch.object(self.sc.messagebox, "showinfo"):
+            self.sc.import_config_json()
+
+        self.assertEqual(
+            self.sc.config["user_presets"]["Isochronic"],
+            [{"label": "Low Theta", "carrier_hz": 432.0, "pulse_hz": 4.0}],
+        )
+
+
 if __name__ == '__main__':
     unittest.main()

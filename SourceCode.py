@@ -1146,9 +1146,16 @@ def import_config_json():
             if not isinstance(presets_list, list):
                 return []
             for p in presets_list:
-                if isinstance(p, dict) and "label" in p and "left_hz" in p and "right_hz" in p:
-                    if not isinstance(p["label"], str):
+                if not isinstance(p, dict) or "label" not in p or not isinstance(p["label"], str):
+                    continue
+                if "carrier_hz" in p and "pulse_hz" in p:
+                    try:
+                        p["carrier_hz"] = float(p["carrier_hz"])
+                        p["pulse_hz"] = float(p["pulse_hz"])
+                        valid_presets.append(p)
+                    except (ValueError, TypeError):
                         continue
+                elif "left_hz" in p and "right_hz" in p:
                     try:
                         p["left_hz"] = float(p["left_hz"])
                         p["right_hz"] = float(p["right_hz"])
@@ -1161,6 +1168,7 @@ def import_config_json():
             "user_presets": {
                 "Monaural": _validate_presets(up.get("Monaural")),
                 "Binaural": _validate_presets(up.get("Binaural")),
+                "Isochronic": _validate_presets(up.get("Isochronic")),
             }
         }
 
