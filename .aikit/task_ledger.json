@@ -5,23 +5,12 @@
     "last_phase": "phase 5",
     "active_phase": 5,
     "status": "in_progress",
-    "updated_at": 1793295173.7988183,
+    "updated_at": 1793295254.040387,
     "owner": "opencode:reforge-fix",
     "started_by": "opencode:reforge-fix",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 32",
-      "phase_num": 3,
-      "description": "Reforge stage 32: window 96, 3 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793293454.3370054,
-      "timestamp_str": "2026-10-29 20:04:14",
-      "agent": "opencode"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 33",
@@ -235,6 +224,17 @@
       "status": "superseded",
       "timestamp": 1793295173.7988183,
       "timestamp_str": "2026-10-29 20:32:53",
+      "agent": "opencode:reforge-fix"
+    },
+    {
+      "task_id": "reforge:run-4",
+      "phase": "phase 5",
+      "phase_num": 5,
+      "description": "checklists: passed; README Python prerequisite aligned to 3.10+; tests 81 passed; gates 4/4",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793295254.040387,
+      "timestamp_str": "2026-10-29 20:34:14",
       "agent": "opencode:reforge-fix"
     }
   ]

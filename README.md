@@ -235,7 +235,7 @@ Isochronic tones represent the most recent advancement in brainwave entrainment 
 
 ## 🛠 Prerequisites
 
-- **Python 3.8 or higher**
+- **Python 3.10 or higher**
 - **Operating System**: Windows, macOS, or Linux
 - **Audio Output**: Built-in sound card or external audio interface
 - **System Audio Libraries**:
