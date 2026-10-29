@@ -5,3 +5,5 @@ __pycache__/
 .aikit/*.bak
 .aikit/*.tmp_*
 .aikit/*.corrupt_*
+.aikit/reforge.reviews/
+*.py[cod]

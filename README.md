@@ -51,6 +51,7 @@ NeuralBeat/
 ├── LICENSES/                 <- REUSE license texts
 ├── REUSE.toml                <- Machine-readable SPDX metadata
 ├── README.md
+├── assets/
 ├── COMMERCIAL.md
 ├── presets.py
 ├── requirements.txt
@@ -225,10 +226,10 @@ Isochronic tones represent the most recent advancement in brainwave entrainment 
 
 | Preset Name | Pulse Rate | Carrier Tone | Brainwave State |
 |-------------|------------|--------------|------------------|
-| 4 Hz Pulse @ 432 Hz | 6 Hz | 432 Hz | Theta |
-| 8 Hz Pulse @ 432 Hz | 10 Hz | 432 Hz | Alpha |
-| 16 Hz Pulse @ 432 Hz | 14 Hz | 432 Hz | Beta |
-| 40 Hz Pulse @ 432 Hz | 14 Hz | 432 Hz | Gamma |
+| 4 Hz Pulse @ 432 Hz | 4 Hz | 432 Hz | Theta |
+| 8 Hz Pulse @ 432 Hz | 8 Hz | 432 Hz | Alpha |
+| 16 Hz Pulse @ 432 Hz | 16 Hz | 432 Hz | Beta |
+| 40 Hz Pulse @ 432 Hz | 40 Hz | 432 Hz | Gamma |
 
 ---
 

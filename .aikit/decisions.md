@@ -31,3 +31,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 ## License notice cleanup (2026-10-26)
 
 - The license-history notes were removed from README.md and COMMERCIAL.md: the project is offered only under the Aegean License 1.1 (AL-1.1), with commercial use under ACL-1.0.
+
+### ADR-002: Keep isochronic presets and controls consistent with the mono generator
+- **Date**: 2026-10-29
+- **Status**: Accepted
+- **Context**: Isochronic presets were saved as `left_hz`/`right_hz` while the preset list read `carrier_hz`/`pulse_hz`, so a saved preset applied 10 Hz at 200 Hz; the mono isochronic generator also left the right-ear volume and waveform controls active even though it uses only the left channel.
+- **Decision**: Store isochronic user presets with `carrier_hz` and `pulse_hz`, validate pulse and carrier ranges separately, keep a `left_hz`/`right_hz` fallback for older records, and hide the right volume and waveform controls while isochronic mode is selected.
+- **Consequences**:
+  - *Positive*: Saved isochronic presets reproduce the values the user entered, and the UI no longer exposes controls that do nothing.
+  - *Trade-offs*: The user-preset schema now differs by category; older isochronic records remain readable through the fallback.
+- Cross-principle check: PRINCIPLE-016 (ADR), PRINCIPLE-018 (commit and push).

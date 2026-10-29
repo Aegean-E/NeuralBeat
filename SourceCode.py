@@ -189,11 +189,18 @@ def get_user_presets() -> dict:
 def add_user_preset(category: str, label: str, left_hz: float, right_hz: float) -> None:
     category = _normalize_category(category)
     try:
-        preset_obj = {
-            "label": str(label).strip(),
-            "left_hz": float(left_hz),
-            "right_hz": float(right_hz),
-        }
+        if category == "Isochronic":
+            preset_obj = {
+                "label": str(label).strip(),
+                "carrier_hz": float(right_hz),
+                "pulse_hz": float(left_hz),
+            }
+        else:
+            preset_obj = {
+                "label": str(label).strip(),
+                "left_hz": float(left_hz),
+                "right_hz": float(right_hz),
+            }
     except ValueError:
         raise ValueError("Invalid numeric value for frequencies.")
     if not preset_obj["label"]:
@@ -1220,8 +1227,8 @@ def build_preset_buttons():
 
     # Isochronic presets - use carrier_hz and pulse_hz
     for i, p in enumerate(allp["Isochronic"]):
-        carrier = p.get("carrier_hz", 200.0)
-        pulse = p.get("pulse_hz", 10.0)
+        carrier = p.get("carrier_hz", p.get("right_hz", 200.0))
+        pulse = p.get("pulse_hz", p.get("left_hz", 10.0))
         btn = ttk.Button(
             isochronic_beats_frame,
             text=p["label"],
@@ -1239,16 +1246,22 @@ def save_current_as_preset():
             messagebox.showerror("Input Error", "Invalid frequency values.")
             return
 
-        err = validate_audio_params(left_hz, right_hz, 50, 50) # Volume doesn't matter for preset, passing dummy
-        if err:
-             # Strip "Volume..." errors if any (unlikely with dummy) or just show generic if freq error
-             if "Frequency" in err:
-                 messagebox.showerror("Input Error", err)
-                 return
-
         category = preset_category_var.get().strip()
         if not category:
             category = "Binaural" if abs(right_hz - left_hz) > 0 else "Monaural"
+
+        if _normalize_category(category) == "Isochronic":
+            if not (0.1 <= left_hz <= 100.0):
+                messagebox.showerror("Input Error", "Beat frequency must be between 0.1 Hz and 100 Hz for isochronic tones.")
+                return
+            if not (20.0 <= right_hz <= 20000.0):
+                messagebox.showerror("Input Error", "Carrier frequency must be between 20 Hz and 20000 Hz.")
+                return
+        else:
+            err = validate_audio_params(left_hz, right_hz, 50, 50)  # Volumes do not matter for a preset.
+            if err and "Frequency" in err:
+                messagebox.showerror("Input Error", err)
+                return
 
         add_user_preset(category=category, label=name, left_hz=left_hz, right_hz=right_hz)
 
@@ -1545,11 +1558,20 @@ def main():
             right_freq_label.config(text="Carrier Tone (Hz):")
             left_freq_frame.config(text="Isochronic Tone Settings")
             right_freq_frame.config(text="Isochronic Tone Settings")
+            # The isochronic generator is mono; the right volume and waveform do not apply.
+            right_vol_label.grid_remove()
+            right_volume_entry.grid_remove()
+            right_waveform_lbl.grid_remove()
+            right_waveform_combobox.grid_remove()
         else:
             left_freq_label.config(text="Frequency (Hz):")
             right_freq_label.config(text="Frequency (Hz):")
             left_freq_frame.config(text="Left Ear Frequency")
             right_freq_frame.config(text="Right Ear Frequency")
+            right_vol_label.grid()
+            right_volume_entry.grid()
+            right_waveform_lbl.grid()
+            right_waveform_combobox.grid()
 
     beat_type_var.trace_add("write", update_freq_labels)
     update_freq_labels()

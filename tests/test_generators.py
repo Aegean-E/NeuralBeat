@@ -87,11 +87,14 @@ class TestBinauralGenerator(unittest.TestCase):
         self.assertTrue(gen.stopping)
 
 
-class TestMonauralGenerator(unittest.TestCase):
-    """Test MonauralGenerator class."""
+class TestMonauralMode(unittest.TestCase):
+    """Test monaural mode through the shared BinauralGenerator."""
     
     @classmethod
     def setUpClass(cls):
+        import numpy as np
+        cls.np = np
+
         import SourceCode as sc
         cls.sc = sc
         
@@ -114,13 +117,13 @@ class TestMonauralGenerator(unittest.TestCase):
         )
     
     def test_generator_initialization(self):
-        """Test MonauralGenerator initializes correctly."""
+        """Test the shared generator initializes correctly."""
         gen = self.sc.BinauralGenerator(self.cfg)
         
         self.assertEqual(gen.samples_generated, 0)
     
     def test_generator_creates_output(self):
-        """Test MonauralGenerator creates audio output."""
+        """Test monaural mode produces identical left and right channels."""
         gen = self.sc.BinauralGenerator(self.cfg)
         frames = 1024
         
@@ -128,6 +131,7 @@ class TestMonauralGenerator(unittest.TestCase):
         
         self.assertEqual(output.shape[0], frames)
         self.assertEqual(output.shape[1], 2)
+        self.assertTrue(self.np.allclose(output[:, 0], output[:, 1]))
 
 
 class TestIsochronicGenerator(unittest.TestCase):

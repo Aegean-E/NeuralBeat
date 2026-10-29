@@ -208,7 +208,7 @@ class TestAddUserPreset(unittest.TestCase):
         cls.patcher.stop()
     
     def test_add_user_preset_isochronic(self):
-        """Test adding isochronic preset."""
+        """Test adding an isochronic preset stores pulse and carrier keys."""
         self.sc.config = {"user_presets": {}}
         
         # Isochronic presets use carrier_hz as right_hz and pulse_hz as left_hz
@@ -216,6 +216,20 @@ class TestAddUserPreset(unittest.TestCase):
         
         self.assertIn("Isochronic", self.sc.config["user_presets"])
         self.assertEqual(len(self.sc.config["user_presets"]["Isochronic"]), 1)
+        self.assertEqual(
+            self.sc.config["user_presets"]["Isochronic"][0],
+            {"label": "Test Preset", "carrier_hz": 432.0, "pulse_hz": 10.0},
+        )
+
+    def test_add_user_preset_isochronic_roundtrip(self):
+        """Test a saved isochronic preset survives get_all_presets unchanged."""
+        self.sc.config = {"user_presets": {}}
+
+        self.sc.add_user_preset("Isochronic", "Low Theta", 4, 432)
+
+        presets = self.sc.get_all_presets()
+        saved = [p for p in presets["Isochronic"] if p["label"] == "Low Theta"]
+        self.assertEqual(saved, [{"label": "Low Theta", "carrier_hz": 432.0, "pulse_hz": 4.0}])
     
     def test_add_user_preset_binaural(self):
         """Test adding binaural preset."""

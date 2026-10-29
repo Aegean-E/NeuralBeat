@@ -1,94 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "fix-fresh-install-report-v1",
-    "last_phase": "phase 4",
+    "task_id": "reforge:run-1",
+    "last_phase": "phase 5",
     "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1792619977.935985,
-    "completed_at": 1792620012.779406
+    "status": "in_progress",
+    "updated_at": 1793294819.8232684,
+    "owner": "opencode:reforge-fix",
+    "started_by": "opencode:reforge-fix",
+    "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "integrate-aikit-gates",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: fix test mocks, hygiene findings, and README gate drift; then verify and push",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792506974.3619695,
-      "timestamp_str": "2026-10-20 17:36:14",
-      "impact_assessment": {
-        "why": "AIKit integration surfaced gate failures in an otherwise working project: fragile tkinter mocks, silent exception handlers, missing subprocess timeout, private-attribute coupling, and README cold-start drift.",
-        "benefits": "All four Phase 4 gates pass; the repo carries AIKit memory; project is pushable with verified history.",
-        "risks": "contract: none; dependency: none added; concurrency: none; state: test harness and error handling change, README structure changes",
-        "mitigation": "Keep behavior identical by logging swallowed errors, add timeout only to the test runner, fix mocks without weakening assertions, and verify with the full gate suite before commit."
-      }
-    },
-    {
-      "task_id": "integrate-aikit-gates",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Repaired test harness (78 tests pass), logged swallowed errors, added subprocess timeout, removed private-attribute coupling, added README cold-start sections",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792507786.608805,
-      "timestamp_str": "2026-10-20 17:49:46"
-    },
-    {
-      "task_id": "integrate-aikit-gates",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Phase 4 complete: checklists: passed; 4/4 gates (test, hygiene, guidelines, secrets) green",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792507787.8713274,
-      "timestamp_str": "2026-10-20 17:49:47"
-    },
-    {
-      "task_id": "integrate-aikit-gates",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'integrate-aikit-gates' completed successfully.",
-      "status": "completed",
-      "timestamp": 1792507794.2193363,
-      "timestamp_str": "2026-10-20 17:49:54"
-    },
-    {
-      "task_id": "license-agpl-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/1] Switch NeuralBeat from Apache-2.0 to AGPL-3.0: replace LICENSE with the canonical text, update the README license section, record ADR-001, run all four project gates, commit and push non-destructively",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792511149.1682346,
-      "timestamp_str": "2026-10-20 18:45:49",
-      "impact_assessment": {
-        "why": "NeuralBeat still ships under Apache-2.0 while the rest of the portfolio uses AGPL-3.0, so GitHub advertises an inconsistent license and the README repeats the old terms",
-        "benefits": "One license across the portfolio, correct GitHub detection, README and ADR records that match the shipped LICENSE, and a clean legal contract for contributors",
-        "risks": "contract: NeuralBeat moves from permissive Apache-2.0 to copyleft AGPL-3.0; dependency: none; concurrency: none; state: none",
-        "mitigation": "Use the canonical AGPL-3.0 text, keep the change to LICENSE/README/ADR, run python aikit.py check NeuralBeat, stage explicitly, and push only after the commit is verified"
-      }
-    },
-    {
-      "task_id": "license-agpl-v1",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[1/1] LICENSE replaced with canonical AGPL-3.0, README license section updated, ADR-001 recorded; checklists: passed (test, hygiene, guidelines, secrets)",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1792511165.3885126,
-      "timestamp_str": "2026-10-20 18:46:05"
-    },
-    {
-      "task_id": "license-agpl-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'license-agpl-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1792511272.0748618,
-      "timestamp_str": "2026-10-20 18:47:52"
-    },
     {
       "task_id": "fix-fresh-install-report-v1",
       "phase": "phase 2",
@@ -143,6 +65,179 @@
       "status": "completed",
       "timestamp": 1792620012.779409,
       "timestamp_str": "2026-10-22 01:00:12"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 27",
+      "phase_num": 3,
+      "description": "Reforge stage 27: window 81, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293255.935463,
+      "timestamp_str": "2026-10-29 20:00:55",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 28",
+      "phase_num": 3,
+      "description": "Reforge stage 28: window 84, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293294.5349877,
+      "timestamp_str": "2026-10-29 20:01:34",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 29",
+      "phase_num": 3,
+      "description": "Reforge stage 29: window 87, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293331.0809116,
+      "timestamp_str": "2026-10-29 20:02:11",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 30",
+      "phase_num": 3,
+      "description": "Reforge stage 30: window 90, 3 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293380.7387288,
+      "timestamp_str": "2026-10-29 20:03:00",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 31",
+      "phase_num": 3,
+      "description": "Reforge stage 31: window 93, 3 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293418.7415562,
+      "timestamp_str": "2026-10-29 20:03:38",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 32",
+      "phase_num": 3,
+      "description": "Reforge stage 32: window 96, 3 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293454.3370054,
+      "timestamp_str": "2026-10-29 20:04:14",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 33",
+      "phase_num": 3,
+      "description": "Reforge stage 33: window 99, 3 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293490.6402783,
+      "timestamp_str": "2026-10-29 20:04:50",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 34",
+      "phase_num": 3,
+      "description": "Reforge stage 34: window 102, 3 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293526.2875226,
+      "timestamp_str": "2026-10-29 20:05:26",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 35",
+      "phase_num": 3,
+      "description": "Reforge stage 35: window 105, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, 1 binary not analysed",
+      "files_affected": [
+        "logo.png"
+      ],
+      "status": "in_progress",
+      "timestamp": 1793293575.7845824,
+      "timestamp_str": "2026-10-29 20:06:15",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 36",
+      "phase_num": 3,
+      "description": "Reforge stage 36: window 108, 3 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, 1 binary not analysed",
+      "files_affected": [
+        "banner.png"
+      ],
+      "status": "in_progress",
+      "timestamp": 1793293618.80569,
+      "timestamp_str": "2026-10-29 20:06:58",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 37",
+      "phase_num": 3,
+      "description": "Reforge stage 37: window 111, 3 commit(s), 3 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293649.5449247,
+      "timestamp_str": "2026-10-29 20:07:29",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 38",
+      "phase_num": 3,
+      "description": "Reforge stage 38: window 114, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793293677.7143843,
+      "timestamp_str": "2026-10-29 20:07:57",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 39",
+      "phase_num": 3,
+      "description": "Reforge stage 39: window 117, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, 1 binary not analysed",
+      "files_affected": [
+        "binauralbeatproject.exe"
+      ],
+      "status": "in_progress",
+      "timestamp": 1793293704.1883078,
+      "timestamp_str": "2026-10-29 20:08:24",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "reforge stage 40",
+      "phase_num": 3,
+      "description": "Reforge stage 40: window 118, 1 commit(s), 0 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, 1 binary not analysed",
+      "files_affected": [
+        "binauralbeatproject.exe"
+      ],
+      "status": "in_progress",
+      "timestamp": 1793293734.1828647,
+      "timestamp_str": "2026-10-29 20:08:54",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-1",
+      "phase": "phase 5",
+      "phase_num": 5,
+      "description": "checklists: passed; isochronic preset round-trip and mono controls fixed, monaural test corrected, README preset table fixed, ADR-002 added; tests 80 passed; gates 4/4",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793294819.8232684,
+      "timestamp_str": "2026-10-29 20:26:59",
+      "agent": "opencode:reforge-fix"
     }
   ]
 }

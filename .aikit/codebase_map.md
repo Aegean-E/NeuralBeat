@@ -9,8 +9,8 @@
 - **Total Python Modules**: `16`
 - **Total Classes**: `27`
 - **Total Top-Level Functions**: `36`
-- **Total Class Methods**: `131`
-- **Total Source Lines**: `3802`
+- **Total Class Methods**: `132`
+- **Total Source Lines**: `3842`
 
 ---
 
@@ -32,7 +32,7 @@
 ---
 
 ### [`SourceCode.py`](SourceCode.py)
-**Size**: `1705` lines (`66465` bytes)
+**Size**: `1727` lines (`67505` bytes)
 
 **Classes:**
 - `class NoiseGenerator` - *Generates blocks of colored noise with state preservation using digital filters.*
@@ -183,7 +183,7 @@
 ### [`tests/test_config_presets.py`](tests/test_config_presets.py)
 > *Test config and preset management functions.*
 
-**Size**: `267` lines (`8956` bytes)
+**Size**: `281` lines (`9637` bytes)
 
 **Classes:**
 - `class TestNormalizeCategory` - *Test _normalize_category function.*
@@ -207,7 +207,8 @@
 - `class TestAddUserPreset` - *Test add_user_preset function.*
   - Method `.setUpClass()`
   - Method `.tearDownClass()`
-  - Method `.test_add_user_preset_isochronic()` - *Test adding isochronic preset.*
+  - Method `.test_add_user_preset_isochronic()` - *Test adding an isochronic preset stores pulse and carrier keys.*
+  - Method `.test_add_user_preset_isochronic_roundtrip()` - *Test a saved isochronic preset survives get_all_presets unchanged.*
   - Method `.test_add_user_preset_binaural()` - *Test adding binaural preset.*
 - `class TestRemoveUserPreset` - *Test remove_user_preset function.*
   - Method `.setUpClass()`
@@ -239,7 +240,7 @@
 ### [`tests/test_generators.py`](tests/test_generators.py)
 > *Test generator classes.*
 
-**Size**: `267` lines (`7901` bytes)
+**Size**: `271` lines (`8062` bytes)
 
 **Classes:**
 - `class TestBinauralGenerator` - *Test BinauralGenerator class.*
@@ -248,10 +249,10 @@
   - Method `.test_generator_creates_output()` - *Test BinauralGenerator creates audio output.*
   - Method `.test_generator_fade_in()` - *Test fade-in at start.*
   - Method `.test_request_stop()` - *Test request_stop sets stopping flag.*
-- `class TestMonauralGenerator` - *Test MonauralGenerator class.*
+- `class TestMonauralMode` - *Test monaural mode through the shared BinauralGenerator.*
   - Method `.setUpClass()`
-  - Method `.test_generator_initialization()` - *Test MonauralGenerator initializes correctly.*
-  - Method `.test_generator_creates_output()` - *Test MonauralGenerator creates audio output.*
+  - Method `.test_generator_initialization()` - *Test the shared generator initializes correctly.*
+  - Method `.test_generator_creates_output()` - *Test monaural mode produces identical left and right channels.*
 - `class TestIsochronicGenerator` - *Test IsochronicGenerator class.*
   - Method `.setUpClass()`
   - Method `.test_generator_initialization()` - *Test IsochronicGenerator initializes correctly.*
