@@ -1,64 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "reforge:run-5",
+    "task_id": "reforge:run-6",
     "last_phase": "phase 5",
     "active_phase": 5,
     "status": "in_progress",
-    "updated_at": 1793295421.181372,
+    "updated_at": 1793295450.9809897,
     "owner": "opencode:reforge-fix",
     "started_by": "opencode:reforge-fix",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 38",
-      "phase_num": 3,
-      "description": "Reforge stage 38: window 114, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793293677.7143843,
-      "timestamp_str": "2026-10-29 20:07:57",
-      "agent": "opencode"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 39",
-      "phase_num": 3,
-      "description": "Reforge stage 39: window 117, 3 commit(s), 1 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, 1 binary not analysed",
-      "files_affected": [
-        "binauralbeatproject.exe"
-      ],
-      "status": "in_progress",
-      "timestamp": 1793293704.1883078,
-      "timestamp_str": "2026-10-29 20:08:24",
-      "agent": "opencode"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 40",
-      "phase_num": 3,
-      "description": "Reforge stage 40: window 118, 1 commit(s), 0 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, 1 binary not analysed",
-      "files_affected": [
-        "binauralbeatproject.exe"
-      ],
-      "status": "in_progress",
-      "timestamp": 1793293734.1828647,
-      "timestamp_str": "2026-10-29 20:08:54",
-      "agent": "opencode"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "phase 5",
-      "phase_num": 5,
-      "description": "checklists: passed; isochronic preset round-trip and mono controls fixed, monaural test corrected, README preset table fixed, ADR-002 added; tests 80 passed; gates 4/4",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793294819.8232684,
-      "timestamp_str": "2026-10-29 20:26:59",
-      "agent": "opencode:reforge-fix"
-    },
     {
       "task_id": "reforge:run-2",
       "phase": "reforge run",
@@ -230,6 +182,49 @@
       "status": "in_progress",
       "timestamp": 1793295421.181372,
       "timestamp_str": "2026-10-29 20:37:01",
+      "agent": "opencode:reforge-fix"
+    },
+    {
+      "task_id": "reforge:run-6",
+      "phase": "reforge run",
+      "phase_num": 3,
+      "description": "run started (start=2, step=3, stop=2)",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793295437.3300164,
+      "timestamp_str": "2026-10-29 20:37:17",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-6",
+      "phase": "reforge stage 1",
+      "phase_num": 3,
+      "description": "Reforge stage 1: window 2, 2 commit(s), 2 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
+      "files_affected": [],
+      "status": "completed",
+      "timestamp": 1793295438.5080807,
+      "timestamp_str": "2026-10-29 20:37:18",
+      "agent": "opencode"
+    },
+    {
+      "task_id": "reforge:run-6",
+      "phase": "phase 5",
+      "phase_num": 5,
+      "description": "checklists: passed; README theme list and UI surface contract audited, 2/2 hunks reviewed, 0 findings; tests 81 passed; gates 4/4",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793295450.9809897,
+      "timestamp_str": "2026-10-29 20:37:30",
+      "agent": "opencode:reforge-fix"
+    },
+    {
+      "task_id": "reforge:run-5",
+      "phase": "superseded",
+      "phase_num": 5,
+      "description": "Superseded by 'reforge:run-6' without --complete or --reset",
+      "status": "superseded",
+      "timestamp": 1793295450.9809897,
+      "timestamp_str": "2026-10-29 20:37:30",
       "agent": "opencode:reforge-fix"
     }
   ]
