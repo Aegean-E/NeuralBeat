@@ -5,23 +5,12 @@
     "last_phase": "phase 5",
     "active_phase": 5,
     "status": "in_progress",
-    "updated_at": 1793295283.4102383,
+    "updated_at": 1793295421.181372,
     "owner": "opencode:reforge-fix",
     "started_by": "opencode:reforge-fix",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 37",
-      "phase_num": 3,
-      "description": "Reforge stage 37: window 111, 3 commit(s), 3 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793293649.5449247,
-      "timestamp_str": "2026-10-29 20:07:29",
-      "agent": "opencode"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 38",
@@ -230,6 +219,17 @@
       "status": "superseded",
       "timestamp": 1793295283.4102383,
       "timestamp_str": "2026-10-29 20:34:43",
+      "agent": "opencode:reforge-fix"
+    },
+    {
+      "task_id": "reforge:run-5",
+      "phase": "phase 5",
+      "phase_num": 5,
+      "description": "checklists: passed; README theme list aligned to the three built-in themes; UI surface contract added; tests 81 passed; gates 4/4",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793295421.181372,
+      "timestamp_str": "2026-10-29 20:37:01",
       "agent": "opencode:reforge-fix"
     }
   ]

@@ -194,10 +194,8 @@ Isochronic tones represent the most recent advancement in brainwave entrainment 
 - Perfect for creating personalized meditation recordings
 
 ### 🎨 Modern, Themeable UI
-- Multiple dark themes:
-  - cosmo, cyborg, darkly, Dracula, lucid, morph, plexus, sandstone, solar, superhero, vapor
-- Multiple light themes:
-  - litera, lumen, minty, pulse, united, yeti
+- Three built-in themes:
+  - Darkly and Superhero (dark), Flatly (light)
 - Easy theme switching via Settings menu
 
 ### 🧪 Scientifically Verified
